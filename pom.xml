@@ -38,4 +38,11 @@
 		</repository>
 	</repositories>
 
+	<scm>
+		<connection>scm:git:git://github.com/imagej/minimal-ij1-plugin</connection>
+		<developerConnection>scm:git:git@github.com:imagej/minimal-ij1-plugin</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/imagej/minimal-ij1-plugin</url>
+	</scm>
+
 </project>
