@@ -51,7 +51,9 @@ Then:
        [here](http://fiji.sc/Maven#How_to_find_a_dependency.27s_groupId.2FartifactId.2Fversion_.28GAV.29.3F))
     4. the *developer* information
     5. the *scm* information
-2. Remove the ```Process_Pixels.java``` file and add your own files
+2. Remove the ```Process_Pixels.java``` file and add your own ```.java``` files
+   to ```src/main/java/<package>/``` (if you need supporting files -- like icons
+   -- in the resulting ```.jar``` file, put them into ```src/main/resources/```)
 3. Edit ```src/main/resources/plugins.config```
 4. Replace the contents of ```README.md``` with information about your project.
 
