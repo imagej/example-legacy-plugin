@@ -53,3 +53,16 @@ Then:
     5. the *scm* information
 2. Remove the ```Process_Pixels.java``` file and add your own files
 3. Edit ```src/main/resources/plugins.config```
+4. Replace the contents of ```README.md``` with information about your project.
+
+If you cloned the ```minimal-ij1-plugin``` repository, you probably want to
+publish the result in your own repository:
+
+1. Call ```git status``` to verify .gitignore lists all the files (or file
+   patterns) that should be ignored
+2. Call ```git add .``` and ```git add -u``` to stage the current files for
+   commit
+3. Call ```git commit``` or ```git gui``` to commit the changes
+4. [Create a new GitHub repository](https://github.com/new)
+5. ```git remote set-url origin git@github.com:<username>/<projectname>```
+6. ```git push origin HEAD```
