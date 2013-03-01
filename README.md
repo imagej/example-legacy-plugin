@@ -16,16 +16,20 @@ Plugin](http://plugins.jedit.org/plugins/?MavenPlugin).
 Die-hard command-line developers can use Maven directly by calling _mvn_
 in the project root.
 
-However you build the project, in the end you will have the .jar file in the
-_target/_ subdirectory. Simply copy it into your ImageJ's _plugins/_
-directory, run _Help&gt;Refresh Menus_ and the plugin will be available in
-_Process&gt;Process Pixels_ (this can be changed by editing
-_src/main/resources/plugins.config_).
+However you build the project, in the end you will have the ```.jar``` file
+(called *artifact* in Maven speak) in the _target/_ subdirectory.
+
+To copy the artifact into the correct place, you can call ```mvn
+-Dimagej.app.directory=/path/to/Fiji.app/```. This will not only copy your
+artifact, but also all the dependencies. Restart your ImageJ or call
+*Help>Refresh Menus* to see your plugin in the menus.
 
 Developing plugins in an IDE is convenient, especially for debugging. To
 that end, the plugin contains a _main()_ method which sets the _plugins.dir_
 system property (so that the plugin is added to the Plugins menu), starts
-ImageJ, loads an image and runs the plugin.
+ImageJ, loads an image and runs the plugin. See also
+[this page](fiji.sc/Debugging#Debugging_plugins_in_an_IDE_.28Netbeans.2C_IntelliJ.2C_Eclipse.2C_etc.29)
+for information how Fiji makes it easier to debug in IDEs.
 
 Since this project is intended as a starting point for your own
 developments, it is in the public domain.
