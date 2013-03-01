@@ -29,3 +29,22 @@ ImageJ, loads an image and runs the plugin.
 
 Since this project is intended as a starting point for your own
 developments, it is in the public domain.
+
+How to use this project as a starting point
+===========================================
+
+Either
+
+* ```git clone git://github.com/imagej/minimal-ij1-plugin```, or
+* unpack https://github.com/imagej/minimal-ij1-plugin/archive/master.zip
+
+Then:
+
+1. Edit the ```pom.xml``` file. Every entry should be pretty self-explanatory. In particular, change
+    1. the *artifactId* (and optionally also *groupId*)
+    2. the *version* (note that you typically want to use a version number ending in *-SNAPSHOT* to mark it as a work in progress rather than a final version)
+    3. the *dependencies* (read how to specify the correct *groupId/artifactId/version* triplet [here](http://fiji.sc/Maven#How_to_find_a_dependency.27s_groupId.2FartifactId.2Fversion_.28GAV.29.3F))
+    4. the *developer* information
+    5. the *scm* information
+2. Remove the ```Process_Pixels.java``` file and add your own files
+3. Edit ```src/main/resources/plugins.config```
