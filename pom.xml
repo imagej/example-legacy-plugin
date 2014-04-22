@@ -13,11 +13,11 @@
 	</parent>
 
 	<groupId>sc.fiji</groupId>
-	<artifactId>Process_Pixels</artifactId>
+	<artifactId>Cross_Fader</artifactId>
 	<version>1.0.0</version>
 
-	<name>plugins/Process_Pixels.jar</name>
-	<description>A Maven project implementing an ImageJ 1.x plugin</description>
+	<name>Cross Fader</name>
+	<description>An ImageJ 1.x plugin to compare two images</description>
 
 	<dependencies>
 		<dependency>
@@ -44,37 +44,21 @@
 				<directory>${project.build.testSourceDirectory}</directory>
 			</testResource>
 		</testResources>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>java</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<mainClass>Process_Pixels</mainClass>
-				</configuration>
-			</plugin>
-		</plugins>
 	</build>
 
 	<developers>
 		<developer>
-			<id>dscho</id>
-			<name>Johannes Schindelin</name>
-			<email>johannes.schindelin@gmx.de</email>
-			<url>http://loci.wisc.edu/people/johannes-schindelin</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
+			<id>schmid</id>
+			<name>Michael Schmid</name>
+			<email>schmid@iap.tuwien.ac.at</email>
+			<url>http://www.iap.tuwien.ac.at/www/surface/group/schmid/index</url>
+			<organization>Institut für Angewandte Physik, TU Wien</organization>
+			<organizationUrl>http://www.iap.tuwien.ac.at/www/index</organizationUrl>
 			<roles>
 				<role>architect</role>
 				<role>developer</role>
 			</roles>
-			<timezone>-6</timezone>
+			<timezone>+1</timezone>
 		</developer>
 	</developers>
 
@@ -87,10 +71,10 @@
 	</repositories>
 
 	<scm>
-		<connection>scm:git:git://github.com/imagej/minimal-ij1-plugin</connection>
-		<developerConnection>scm:git:git@github.com:imagej/minimal-ij1-plugin</developerConnection>
+		<connection>scm:git:git://github.com/fiji/Cross_Fader</connection>
+		<developerConnection>scm:git:git@github.com:fiji/Cross_Fader</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/imagej/minimal-ij1-plugin</url>
+		<url>https://github.com/fiji/Cross_Fader</url>
 	</scm>
 
 </project>
