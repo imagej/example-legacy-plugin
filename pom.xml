@@ -77,14 +77,6 @@
 		</developer>
 	</developers>
 
-	<repositories>
-		<!-- NB: for project parent -->
-		<repository>
-			<id>imagej.public</id>
-			<url>http://maven.imagej.net/content/groups/public</url>
-		</repository>
-	</repositories>
-
 	<scm>
 		<connection>scm:git:git://github.com/imagej/minimal-ij1-plugin</connection>
 		<developerConnection>scm:git:git@github.com:imagej/minimal-ij1-plugin</developerConnection>
