@@ -6,23 +6,32 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>net.imagej</groupId>
-		<artifactId>pom-imagej</artifactId>
-		<version>2.37</version>
+		<groupId>sc.fiji</groupId>
+		<artifactId>pom-fiji</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
 	<groupId>sc.fiji</groupId>
-	<artifactId>Process_Pixels</artifactId>
+	<artifactId>JNI_Example</artifactId>
 	<version>1.0.0</version>
+	<packaging>nar</packaging>
 
-	<name>plugins/Process_Pixels.jar</name>
-	<description>A Maven project implementing an ImageJ 1.x plugin</description>
+	<name>Native ImageJ 1.x plugin</name>
+	<description>A Maven project implementing an ImageJ 1.x plugin using platform-dependent C code</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>fiji-lib</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-common</artifactId>
 		</dependency>
 	</dependencies>
 
@@ -55,7 +64,20 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>Process_Pixels</mainClass>
+					<mainClass>JNI_Example</mainClass>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.github.maven-nar</groupId>
+				<artifactId>nar-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<libraries>
+						<library>
+							<type>jni</type>
+							<linkCPP>false</linkCPP>
+						</library>
+					</libraries>
 				</configuration>
 			</plugin>
 		</plugins>
