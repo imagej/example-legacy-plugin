@@ -19,6 +19,10 @@
 	<name>plugins/Process_Pixels.jar</name>
 	<description>A Maven project implementing an ImageJ 1.x plugin</description>
 
+	<properties>
+		<main-class>Process_Pixels</main-class>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>net.imagej</groupId>
@@ -43,22 +47,6 @@
 				<directory>${project.build.testSourceDirectory}</directory>
 			</testResource>
 		</testResources>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>java</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<mainClass>Process_Pixels</mainClass>
-				</configuration>
-			</plugin>
-		</plugins>
 	</build>
 
 	<developers>
