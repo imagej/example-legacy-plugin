@@ -19,17 +19,6 @@
 	<name>plugins/Process_Pixels.jar</name>
 	<description>A Maven project implementing an ImageJ 1.x plugin</description>
 
-	<properties>
-		<main-class>Process_Pixels</main-class>
-	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>net.imagej</groupId>
-			<artifactId>ij</artifactId>
-		</dependency>
-	</dependencies>
-
 	<developers>
 		<developer>
 			<id>dscho</id>
@@ -52,5 +41,16 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/imagej/minimal-ij1-plugin</url>
 	</scm>
+
+	<properties>
+		<main-class>Process_Pixels</main-class>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+	</dependencies>
 
 </project>
