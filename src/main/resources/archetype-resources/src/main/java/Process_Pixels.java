@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 /*
  * To the extent possible under law, the Fiji developers have waived
  * all copyright and related or neighboring rights to this tutorial code.
@@ -21,7 +24,7 @@ import ij.process.ImageProcessor;
  *
  * @author The Fiji Team
  */
-public class Process_Pixels implements PlugInFilter {
+public class ${artifactId} implements PlugInFilter {
 	protected ImagePlus image;
 
 	// image property members
@@ -33,7 +36,7 @@ public class Process_Pixels implements PlugInFilter {
 	public String name;
 
 	/**
-	 * @see ij.plugin.filter.PlugInFilter#setup(java.lang.String, ij.ImagePlus)
+	 * @see ij.plugin.filter.PlugInFilter${symbol_pound}setup(java.lang.String, ij.ImagePlus)
 	 */
 	@Override
 	public int setup(String arg, ImagePlus imp) {
@@ -47,7 +50,7 @@ public class Process_Pixels implements PlugInFilter {
 	}
 
 	/**
-	 * @see ij.plugin.filter.PlugInFilter#run(ij.process.ImageProcessor)
+	 * @see ij.plugin.filter.PlugInFilter${symbol_pound}run(ij.process.ImageProcessor)
 	 */
 	@Override
 	public void run(ImageProcessor ip) {
@@ -83,11 +86,11 @@ public class Process_Pixels implements PlugInFilter {
 	 * Process an image.
 	 *
 	 * Please provide this method even if {@link ij.plugin.filter.PlugInFilter} does require it;
-	 * the method {@link ij.plugin.filter.PlugInFilter#run(ij.process.ImageProcessor)} can only
+	 * the method {@link ij.plugin.filter.PlugInFilter${symbol_pound}run(ij.process.ImageProcessor)} can only
 	 * handle 2-dimensional data.
 	 *
 	 * If your plugin does not change the pixels in-place, make this method return the results and
-	 * change the {@link #setup(java.lang.String, ij.ImagePlus)} method to return also the
+	 * change the {@link ${symbol_pound}setup(java.lang.String, ij.ImagePlus)} method to return also the
 	 * <i>DOES_NOTHING</i> flag.
 	 *
 	 * @param image the image (possible multi-dimensional)
@@ -174,7 +177,7 @@ public class Process_Pixels implements PlugInFilter {
 	 */
 	public static void main(String[] args) {
 		// set the plugins.dir property to make the plugin appear in the Plugins menu
-		Class<?> clazz = Process_Pixels.class;
+		Class<?> clazz = ${artifactId}.class;
 		String url = clazz.getResource("/" + clazz.getName().replace('.', '/') + ".class").toString();
 		String pluginsDir = url.substring(5, url.length() - clazz.getName().length() - 6);
 		System.setProperty("plugins.dir", pluginsDir);
