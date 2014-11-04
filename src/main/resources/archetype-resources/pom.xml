@@ -12,8 +12,8 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>
 
-	<name>plugins/Process_Pixels.jar</name>
-	<description>A Maven project implementing an ImageJ 1.x plugin</description>
+	<name>${artifactId}</name>
+	<description>${description}</description>
 
 	<dependencies>
 		<dependency>
@@ -51,7 +51,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>Process_Pixels</mainClass>
+					<mainClass>${artifactId}</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -59,25 +59,24 @@
 
 	<developers>
 		<developer>
-			<id>dscho</id>
-			<name>Johannes Schindelin</name>
-			<email>johannes.schindelin@gmx.de</email>
-			<url>http://loci.wisc.edu/people/johannes-schindelin</url>
-			<organization>UW-Madison LOCI</organization>
-			<organizationUrl>http://loci.wisc.edu/</organizationUrl>
+			<id>${developerID}</id>
+			<name>${developerName}</name>
+			<email>${developerEmail}</email>
+			<url>${developerURL}</url>
+			<organization>${organizationName}</organization>
+			<organizationUrl>${organizationURL}</organizationUrl>
 			<roles>
-				<role>architect</role>
 				<role>developer</role>
 			</roles>
-			<timezone>-6</timezone>
+			<timezone>${developerTimezone}</timezone>
 		</developer>
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/imagej/minimal-ij1-plugin</connection>
-		<developerConnection>scm:git:git@github.com:imagej/minimal-ij1-plugin</developerConnection>
+		<connection>scm:git:git://github.com/${githubRepository}</connection>
+		<developerConnection>scm:git:git@github.com:${githubRepository}</developerConnection>
 		<tag>HEAD</tag>
-		<url>https://github.com/imagej/minimal-ij1-plugin</url>
+		<url>https://github.com/${githubRepository}</url>
 	</scm>
 
 </project>
