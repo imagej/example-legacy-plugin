@@ -14,7 +14,7 @@
 
 	<groupId>sc.fiji</groupId>
 	<artifactId>Process_Pixels</artifactId>
-	<version>1.0.0</version>
+	<version>0.1.0-SNAPSHOT</version>
 
 	<name>plugins/Process_Pixels.jar</name>
 	<description>A Maven project implementing an ImageJ 1.x plugin</description>
