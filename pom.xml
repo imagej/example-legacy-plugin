@@ -35,7 +35,7 @@
 
   <description>A Maven project implementing an ImageJ 1.x plugin</description>
 
-  <url>http://imagej.net/Process_Pixels/</url>
+  <url>http://imagej.net/Maven</url>
 
   <developers>
     <developer>
