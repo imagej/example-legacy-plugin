@@ -12,8 +12,14 @@
 	<artifactId>${artifactId}</artifactId>
 	<version>${version}</version>
 
+#if ( $name != 'N/A' )
+	<name>${name}</name>
+#else
 	<name>${artifactId}</name>
+#end
+#if ( $description != 'N/A' )
 	<description>${description}</description>
+#end
 
 	<dependencies>
 		<dependency>
@@ -57,26 +63,44 @@
 		</plugins>
 	</build>
 
+#if ( $developerID != 'N/A' || $developerEmail != 'N/A' || $developerEmail != 'N/A' || $developerURL != 'N/A' || $developerTimezone != 'N/A' || $organizationName != 'N/A' || $organizationURL != 'N/A' )
 	<developers>
 		<developer>
+#if ( $developerID != 'N/A' )
 			<id>${developerID}</id>
+#end
+#if ( $developerName != 'N/A' )
 			<name>${developerName}</name>
+#end
+#if ( $developerEmail != 'N/A' )
 			<email>${developerEmail}</email>
+#end
+#if ( $developerURL != 'N/A' )
 			<url>${developerURL}</url>
+#end
+#if ( $organizationName != 'N/A' )
 			<organization>${organizationName}</organization>
+#end
+#if ( $organizationURL != 'N/A' )
 			<organizationUrl>${organizationURL}</organizationUrl>
+#end
 			<roles>
 				<role>developer</role>
 			</roles>
+#if ( $developerTimezone != 'N/A' )
 			<timezone>${developerTimezone}</timezone>
+#end
 		</developer>
 	</developers>
+#end
 
+#if ( $githubRepository != 'N/A' )
 	<scm>
 		<connection>scm:git:git://github.com/${githubRepository}</connection>
 		<developerConnection>scm:git:git@github.com:${githubRepository}</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/${githubRepository}</url>
 	</scm>
+#end
 
 </project>
