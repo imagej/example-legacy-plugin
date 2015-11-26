@@ -72,3 +72,11 @@ publish the result in your own repository:
 4. [Create a new GitHub repository](https://github.com/new)
 5. ```git remote set-url origin git@github.com:<username>/<projectname>```
 6. ```git push origin HEAD```
+
+### Eclipse: To ensure that Maven copies the plugin to your Fiji folder 
+
+1. Go to _Run Configurations..._
+2. Choose _Maven Build_
+2. Add the following parameter: name: ```imagej.app.directory``` value: ```/path/to/Fiji.app/```
+
+This ensures that the final ```.jar``` file will also be copied to your Fiji plugins folder everytime you run the Maven Build
