@@ -74,6 +74,13 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/imagej/minimal-ij1-plugin</url>
 	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/imagej/minimal-ij1-plugin/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
 
 	<properties>
 		<package-name>com.mycompany.imagej</package-name>
