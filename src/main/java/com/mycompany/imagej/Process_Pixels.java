@@ -1,5 +1,5 @@
 /*
- * To the extent possible under law, the Fiji developers have waived
+ * To the extent possible under law, the ImageJ developers have waived
  * all copyright and related or neighboring rights to this tutorial code.
  *
  * See the CC0 1.0 Universal license for details:
@@ -21,7 +21,7 @@ import ij.process.ImageProcessor;
  * A template for processing each pixel of either
  * GRAY8, GRAY16, GRAY32 or COLOR_RGB images.
  *
- * @author The Fiji Team
+ * @author Johannes Schindelin
  */
 public class Process_Pixels implements PlugInFilter {
 	protected ImagePlus image;
