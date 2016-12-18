@@ -12,7 +12,7 @@
 		<relativePath />
 	</parent>
 
-	<groupId>sc.fiji</groupId>
+	<groupId>com.mycompany</groupId>
 	<artifactId>Process_Pixels</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 
@@ -51,7 +51,8 @@
 	</scm>
 
 	<properties>
-		<main-class>Process_Pixels</main-class>
+		<package-name>com.mycompany.imagej</package-name>
+		<main-class>com.mycompany.imagej.Process_Pixels</main-class>
 	</properties>
 
 	<dependencies>

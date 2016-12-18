@@ -6,6 +6,8 @@
  *     http://creativecommons.org/publicdomain/zero/1.0/
  */
 
+package com.mycompany.imagej;
+
 import ij.IJ;
 import ij.ImageJ;
 import ij.ImagePlus;
