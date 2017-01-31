@@ -1,4 +1,4 @@
-This is a minimal Maven project implementing an ImageJ 1.x plugin.
+This is an example Maven project implementing an ImageJ 1.x plugin.
 
 It is intended as an ideal starting point to develop new ImageJ 1.x plugins
 in an IDE of your choice. You can even collaborate with developers using a
@@ -41,8 +41,8 @@ How to use this project as a starting point
 
 Either
 
-* `git clone git://github.com/imagej/minimal-ij1-plugin`, or
-* unpack https://github.com/imagej/minimal-ij1-plugin/archive/master.zip
+* `git clone git://github.com/imagej/example-legacy-plugin`, or
+* unpack https://github.com/imagej/example-legacy-plugin/archive/master.zip
 
 Then:
 
@@ -64,7 +64,7 @@ Then:
 3. Edit `src/main/resources/plugins.config`
 4. Replace the contents of `README.md` with information about your project.
 
-If you cloned the `minimal-ij1-plugin` repository, you probably want to
+If you cloned the `example-legacy-plugin` repository, you probably want to
 publish the result in your own repository:
 
 1. Call `git status` to verify .gitignore lists all the files (or file
