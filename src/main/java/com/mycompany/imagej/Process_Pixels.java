@@ -171,7 +171,7 @@ public class Process_Pixels implements PlugInFilter {
 	public static void main(String[] args) {
 		// set the plugins.dir property to make the plugin appear in the Plugins menu
 		Class<?> clazz = Process_Pixels.class;
-		String url = clazz.getResource("/" + clazz.getName().replace('.', '/') + ".class").toString();
+		String url = clazz.getResource("/" + clazz.getName().replace('.', '/') + ".class").toString().replace("%20", " ");
 		String pluginsDir = url.substring("file:".length(), url.length() - clazz.getName().length() - ".class".length());
 		System.setProperty("plugins.dir", pluginsDir);
 
