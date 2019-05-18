@@ -168,12 +168,13 @@ public class Process_Pixels implements PlugInFilter {
 	 *
 	 * @param args unused
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// set the plugins.dir property to make the plugin appear in the Plugins menu
+		// see: https://stackoverflow.com/a/7060464/1207769
 		Class<?> clazz = Process_Pixels.class;
-		String url = clazz.getResource("/" + clazz.getName().replace('.', '/') + ".class").toString();
-		String pluginsDir = url.substring("file:".length(), url.length() - clazz.getName().length() - ".class".length());
-		System.setProperty("plugins.dir", pluginsDir);
+		java.net.URL url = clazz.getProtectionDomain().getCodeSource().getLocation();
+		java.io.File file = new java.io.File(url.toURI());
+		System.setProperty("plugins.dir", file.getAbsolutePath());
 
 		// start ImageJ
 		new ImageJ();
