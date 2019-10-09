@@ -5,10 +5,10 @@ in an IDE of your choice. You can even collaborate with developers using a
 different IDE than you.
 
 * In [Eclipse](http://eclipse.org), for example, it is as simple as
-  _File&gt;Import...&gt;Existing Maven Project_.
+  _File &#8250; Import... &#8250; Existing Maven Project_.
 
 * In [NetBeans](http://netbeans.org), it is even simpler:
-  _File&gt;Open Project_.
+  _File &#8250; Open Project_.
 
 * The same works in [IntelliJ](http://jetbrains.net).
 
@@ -22,9 +22,9 @@ However you build the project, in the end you will have the `.jar` file
 (called *artifact* in Maven speak) in the `target/` subdirectory.
 
 To copy the artifact into the correct place, you can call
-`mvn -Dimagej.app.directory=/path/to/ImageJ.app/`.
+`mvn -Dscijava.app.directory=/path/to/ImageJ.app/`.
 This will not only copy your artifact, but also all the dependencies. Restart
-your ImageJ or call *Help>Refresh Menus* to see your plugin in the menus.
+your ImageJ or call *Help &#8250; Refresh Menus* to see your plugin in the menus.
 
 Developing plugins in an IDE is convenient, especially for debugging. To
 that end, the plugin contains a `main` method which sets the `plugins.dir`
@@ -39,14 +39,12 @@ developments, it is in the public domain.
 How to use this project as a starting point
 ===========================================
 
-Either
+1. Visit [this link](https://github.com/imagej/example-legacy-plugin/generate)
+   to create a new repository in your space using this one as a template.
 
-* `git clone git://github.com/imagej/example-legacy-plugin`, or
-* unpack https://github.com/imagej/example-legacy-plugin/archive/master.zip
+2. [Clone your new repository](https://help.github.com/en/articles/cloning-a-repository).
 
-Then:
-
-1. Edit the `pom.xml` file. Every entry should be pretty self-explanatory.
+3. Edit the `pom.xml` file. Every entry should be pretty self-explanatory.
    In particular, change
     1. the *artifactId* (**NOTE**: should contain a '_' character)
     2. the *groupId*, ideally to a reverse domain name your organization owns
@@ -58,31 +56,26 @@ Then:
        [here](https://imagej.net/Maven#How_to_find_a_dependency.27s_groupId.2FartifactId.2Fversion_.28GAV.29.3F))
     5. the *developer* information
     6. the *scm* information
-2. Remove the `Process_Pixels.java` file and add your own `.java` files
+
+4. Remove the `Process_Pixels.java` file and add your own `.java` files
    to `src/main/java/<package>/` (if you need supporting files -- like icons
    -- in the resulting `.jar` file, put them into `src/main/resources/`)
-3. Edit `src/main/resources/plugins.config`
-4. Replace the contents of `README.md` with information about your project.
 
-If you cloned the `example-legacy-plugin` repository, you probably want to
-publish the result in your own repository:
+5. Edit `src/main/resources/plugins.config`
 
-1. Call `git status` to verify .gitignore lists all the files (or file
-   patterns) that should be ignored
-2. Call `git add .` and `git add -u` to stage the current files for
-   commit
-3. Call `git commit` or `git gui` to commit the changes
-4. [Create a new GitHub repository](https://github.com/new)
-5. `git remote set-url origin git@github.com:<username>/<projectname>`
-6. `git push origin HEAD`
+6. Replace the contents of `README.md` with information about your project.
+
+7. Make your initial
+   [commit](https://help.github.com/en/desktop/contributing-to-projects/committing-and-reviewing-changes-to-your-project) and
+   [push the results](https://help.github.com/en/articles/pushing-commits-to-a-remote-repository)!
 
 ### Eclipse: To ensure that Maven copies the plugin to your ImageJ folder
 
 1. Go to _Run Configurations..._
 2. Choose _Maven Build_
 3. Add the following parameter:
-    - name: `imagej.app.directory`
+    - name: `scijava.app.directory`
     - value: `/path/to/ImageJ.app/`
 
-This ensures that the final `.jar` file will also be copied to your ImageJ
-plugins folder everytime you run the Maven Build
+This ensures that the final `.jar` file will also be copied to
+your ImageJ plugins folder everytime you run the Maven build.
