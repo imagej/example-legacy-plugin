@@ -1,5 +1,8 @@
 This is an example Maven project implementing an ImageJ 1.x plugin.
 
+For an example Maven project implementing an **ImageJ2 command**, see:
+    https://github.com/imagej/example-imagej2-command
+
 It is intended as an ideal starting point to develop new ImageJ 1.x plugins
 in an IDE of your choice. You can even collaborate with developers using a
 different IDE than you.
