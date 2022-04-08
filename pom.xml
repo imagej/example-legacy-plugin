@@ -33,7 +33,7 @@
 	</licenses>
 
 	<developers>
-		<!-- See https://imagej.net/Team -->
+		<!-- See https://imagej.net/contribute/governance#scijava-team-roles -->
 		<developer>
 			<id>octocat</id>                                          <!-- FIXME: Your GitHub handle here -->
 			<name>Noma Onomatopoeia</name>                            <!-- FIXME: Your name here          -->
