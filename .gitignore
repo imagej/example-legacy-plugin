@@ -1,4 +1,6 @@
 /.classpath
+/.factorypath
+/.idea/
 /.project
 /.settings/
 /target/
