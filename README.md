@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/imagej/example-legacy-plugin/actions/workflows/build.yml/badge.svg)](https://github.com/imagej/example-legacy-plugin/actions/workflows/build.yml)
+
 This is an example Maven project implementing an ImageJ 1.x plugin.
 
 For an example Maven project implementing an **ImageJ2 command**, see:
